@@ -1,0 +1,400 @@
+@import 'preset.scss';
+
+/* Login */
+.app-v {
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+.ocean {
+  height: 5%;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background: #FF0013;
+}
+
+.wave {
+  background: url(/images/wave.min.svg) repeat-x;
+  position: absolute;
+  top: -198px;
+  width: 6000px;
+  height: 198px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.5;
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 0.8;
+  left: -300px;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -900px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}
+
+.auth-wrapper {
+  display: flex;
+  min-height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+  flex-basis: 100%;
+  align-items: center;
+
+  // common style for both v1 and v2
+  a {
+    text-decoration: unset;
+  }
+
+  // auth v1
+  &.auth-v1 {
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 1.5rem;
+
+    .auth-mask-bg {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+    .auth-tree,
+    .auth-tree-3 {
+      position: absolute;
+    }
+    .auth-tree {
+      bottom: 0;
+      left: 0;
+    }
+    .auth-tree-3 {
+      bottom: 0;
+      right: 0;
+    }
+
+    // auth card
+    .auth-inner {
+      width: 28rem;
+      z-index: 1;
+      .auth-card {
+        padding: 0.9375rem 0.875rem;
+      }
+    }
+  }
+}
+
+
+/* Account Settings Bank, Account Settings Security */
+.two-factor-auth {
+  max-width: 25rem;
+}
+.security-character-wrapper {
+  position: relative;
+
+  .security-character {
+    position: absolute;
+    bottom: -0.3rem;
+  }
+}
+
+
+
+/* App Bar */
+.v-bar--underline {
+  border-bottom-color: rgba(0,0,0,.12)!important;
+  border-width: 0 0 thin;
+  border-style: solid;
+  background: white !important;
+}
+
+.no-background-hover::before {
+    background-color: transparent !important;
+}
+
+.secondary-hover:hover {
+	color: $secondary-default !important;
+    caret-color: $secondary-default !important;
+}
+
+.avatar-small {
+     width: 32px;
+     height: 32px;
+
+     .v-skeleton-loader__avatar {
+         width: 32px;
+         height: 32px;
+     }
+ }
+
+
+/* Dashboard Crown */
+.color-blue {
+    color: rgba(33, 150, 243, 0.85);
+}
+
+.color-green {
+    color: rgba(2, 177, 119, 0.85);
+}
+
+.color-orange {
+    color: rgba(245, 161, 32, 0.85);
+}
+
+.greeting-card-bg {
+	position: absolute !important;
+	bottom: 0;
+	right: 0;
+}
+.greeting-card-trophy {
+	position: absolute !important;
+	bottom: 10%;
+	right: 8%;
+}
+
+
+/* Dashboard Profile */
+.profile-card-title {
+  word-break: break-word !important;
+}
+
+
+/* NavBar */
+.nv-drawer {
+  .v-navigation-drawer__content {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+  }
+}
+
+
+/* Dashboard */
+.radial-wrapper {
+  div{
+      display: flex;
+      justify-content: center;
+  }
+}
+
+
+/* Group Sales, Personal Sales */
+.v-main {
+  .legendBox {
+      hr {
+          position: absolute;
+          width: 100%;
+          border-width: 2px 0 0;
+          border-color: inherit;
+      }
+  }
+
+
+  .sales-card-select {
+      width: 168px;
+      max-width: 168px;
+  }
+
+
+  .sales-overlay {
+      z-index: 3;
+  }
+}
+
+.subMenu {
+    width: 300px !important;
+
+    .subMenu-div {
+        height: auto;
+        min-height: 45%;
+        margin: 24px 24px 24px 0px;
+    }
+
+    .v-navigation-drawer__border {
+        display: none;
+    }
+
+    .subMenu-sales {
+        flex: 0 0 auto;
+    }
+}
+
+
+.v-skeleton-loader {
+  .v-skeleton-loader__image {
+      height: 100% !important;
+  }
+}
+
+//level badge
+.badge-small {
+    .v-badge__badge {
+        width: 16px;
+        min-width: 16px;
+        height: 16px;
+    }
+}
+
+.trip.pax-wrapper {
+    position: absolute;
+    top: 47%;
+    left: 50.5%;
+    transform: translate(-50%, -50%);
+}
+
+.info-icon {
+    margin-bottom: 1px;
+    margin-left: 2px;
+}
+
+.line-height-normal {
+  line-height: normal !important;
+}
+
+
+.payout-col-title {
+  width: 40%;
+}
+
+.payout-col {
+  height: 56px !important;
+}
+
+
+.payout-overlay {
+  align-items: flex-start !important;
+  padding-top: 120px !important;
+}
+
+/* Payout Details */
+.seperator-line {
+  border: dashed !important;
+  border-width: 2px 0 0 !important;
+  border-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.border-line {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
+}
+
+@media (min-width: 960px) {
+  // auth bg and tree hide in sm screen
+  .auth-v1 {
+    .auth-tree,
+    .auth-tree-3,
+    .auth-mask-bg {
+      display: none;
+    }
+  }
+
+  /* Dashboard Profile */
+  .profile-avatar {
+    height: 136px !important;
+    min-width: 136px !important;
+    width: 136px !important;
+  }
+
+  /* Dashboard */
+  .statistics-col {
+    order: 1 !important;
+  }
+
+  .profile-col {
+    order: 2 !important;
+  }
+
+  /* Group Sales, Personal Sales */
+  .overview-container {
+    .col-md-4, .col-lg-4, .col-xl-4 {
+        max-width: 30% !important;
+    }
+
+    .col-md-8, .col-lg-8, .col-xl-8 {
+        max-width: 70% !important;
+    }
+  }
+
+  .sales-main {
+    margin: 0 200px 0 256px !important;
+  }
+
+
+  .sales-tabs {
+      .v-tabs-bar {
+          height: auto !important;
+      }
+  }
+
+  .overview-tabs {
+      .overview-tab {
+          height: auto !important;
+          align-items: start;
+          justify-content: left;
+          text-align: left;
+          text-transform: none;
+      }
+  }
+
+  .card-piechart {
+      box-shadow: none !important;
+  }
+  //crown
+    .pax-wrapper {
+        position: absolute;
+        top: 35%;
+        left: 47%;
+    }
+
+    .greeting-card-bg {
+        height: 180px !important;
+        width: 159px !important;
+        max-width: 159px !important;
+    }
+
+    .greeting-card-trophy {
+        height: 136px !important;
+        width: 110px !important;
+        max-width: 110px !important;
+    }
+
+
+    //bd sales
+    .bd-main {
+        margin: 0 300px 0 256px !important;
+    }
+
+    .trip.pax-wrapper {
+        position: absolute;
+        top: 47%;
+        left: 50.3%;
+        transform: translate(-50%, -50%);
+    }
+
+    .payout-col-title {
+      width: 30%;
+    }
+
+}
+
+@media (min-width: 1280px) {
+  .payout-col-title {
+    width: 20%;
+  }
+
+}
+

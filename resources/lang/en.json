@@ -1,0 +1,31 @@
+{
+    "test": "HAHA",
+    "login": {
+        "welcome_title": "Welcome to Trofit Partner Platform! 👋🏻",
+        "welcome_subtitle": "Please sign-in to your account and start the adventure",
+        "email": "Username or email",
+        "password": "Password",
+        "login": "Login"
+    },
+    "main_nav": {
+        "home": "Home",
+        "personal": "Personal Sales",
+        "direct_child": "Direct Child Sales",
+        "bd": "TM Sales",
+        "group": "Group Sales",
+        "first_level": "1st Level Sales",
+        "second_level": "2nd Level Sales",
+        "payout": "Payouts",
+        "setting": "Settings & Privacy",
+        "notice": "Notice Board",
+        "logout": "Logout",
+        "language": "Language",
+        "shop": "Back to Shop"
+    },
+    "errors": {
+        "AUT001": "Unable to login, required field(s) missing!",
+        "AUT002": "Incorrect account or password.",
+        "USR001": "Resource not found!"
+    }
+
+}
